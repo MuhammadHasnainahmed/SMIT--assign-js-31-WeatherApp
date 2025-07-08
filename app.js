@@ -3,7 +3,7 @@ let show = document.getElementById('show')
 async function submit() {
     let cityValue = cityName.value;
     // let apikey = '2e0f688d180440658d1172000250807';
-    let url = `http://api.weatherapi.com/v1/current.json?key=2e0f688d180440658d1172000250807&q=${cityValue}&aqi=no`;
+    let url = `https://api.weatherapi.com/v1/current.json?key=2e0f688d180440658d1172000250807&q=${cityValue}&aqi=no`;
      try {
          let res = await fetch(url);
          let data = await res.json()
@@ -18,7 +18,8 @@ async function submit() {
 
      } catch (error) {
         show.innerHTML = `
-        <h1>City not found</h1>`
+        <h1>City not found
+        </h1>`
          
      }
 
